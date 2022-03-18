@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <title>ระบบลงทะเบียนล่าช้า</title>
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+              $('#myModal').modal('show');
+      });
+    </script>
+    <script>
+      window.onload = function(){
+        var element = document.getElementById("error_message");
+        element.classList.toggle("alert-null");
+      };
+    </script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: montserrat;
+    box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://media.discordapp.net/attachments/630750780940484608/780426449013571644/cziU2dG.png?width=1194&height=671");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.err_msg{
+    margin-bottom: 0px;
+}
+
+.login-form {
+    width: 472px;
+    background: #ffffffb6;
+    height: 368px;
+    padding: 10px 35px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    box-shadow: 2px 2px 3px 0.2px #ffffff;
+    border-radius: 15px;
+}
+
+.login-form h1 {
+    font-family: 'Kanit';
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    font-size: 1.25em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    /*text-align: left;
+    font-size: 1.17em;
+    margin-bottom: 20px;
+    font-weight: 500;*/
+}
+
+.txtb {
+    color: #000000; padding-left: 15px;
+    border-radius: 15px;
+    border: solid 1px #cbc9c9; 
+    background-color: #FFFFFF;
+    position: relative;
+    margin: 20px 0;
+}
+
+.txtb:focus{
+    border-color: #33cabb;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.txtb input {
+    font-family: 'Kanit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    color: #333;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 5px;
+    height: 40px;
+}
+
+.logbtn {
+    font-family: 'Kanit';
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: #080807;
+    background-size: 200%;
+    border-radius: 5px 5px 5px 5px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+.logbtn2{
+    font-family: 'Kanit';
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: #e73e20;
+    background-size: 200%;
+    border-radius: 5px 5px 5px 5px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+.logbtn:hover {
+    background-color: #f75f19;
+}
+
+.bottom-text {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+.forgt-btn{
+    margin: 25px;
+    padding: 0px 27px 0px 73px;
+
+}
+.forgt-text{
+    margin: -30px;
+    padding: 0px 58px 36px 76px;
+}
+.rest-text{
+
+    padding: 47px 45px 47px 43px;
+
+}
+
+.div-2columns{
+    position: absolute;
+    left: 50%;
+    width: 1400px;
+    height: 100%;
+    background-color: #d14f4b;
+    transform: translate(-50%);
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    /*padding-top: 20px;*/
+  }
+  
+  .left {
+    left: 0;
+    background-color: #d14f4b;
+  }
+  
+  .right {
+    right: 0;
+    background-color: #f1f1f1;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+.column {
+    /*position: absolute;*/
+    bottom: 50%;
+    width: 50%;
+    /* padding: 10px;*/
+    right: 0;
+    margin: 50px;
+
+}
+  
+/* Clear floats after the columns */
+.row{
+
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 10%;
+    max-width: 1100px;
+    width: 1100px;
+    max-height: 550px;
+    height: 740px;
+    transform: translate(-50%);
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.errorContainer{
+    background: #DDAAAA;
+    padding: 2px;
+    display: none;
+
+}
+
+.alert-error{
+    position: relative;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-success_msg{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+alert-null {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+}
+</style>    
+</head>
+
+<body>
+    
+  <div class="row" >
+    <div class="column" >
+      <img src="https://i.imgur.com/u0s7hgn.pngp" alt="Tu" width="400" height="400" > 
+    </div>
+        <form action="/api" class="login-form" method="POST">
+          <h1>เข้าสู่ระบบ (นักศึกษา/บุคลากร)</h1>
+          <div class="txtb">
+              <input type="text" id="user" name="user" placeholder="Username" value="" required>
+          </div>
+          <div class="txtb">
+              <input type="password" id="pwd" name="pwd" placeholder="Password" value="" required>
+          </div>
+          
+          <div style="padding-left: 72% ;padding-bottom: 5%;">
+           
+            
+          </div>
+          <div class="alert-error" id="error_message">
+            <h6><% if (locals.errors) { %>
+              <div class="err_msg" style="padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;color: #a94442;background-color: #f2dede;border-color: #ebccd1;">
+                User or Password Invalid!
+              </div>
+              
+            <% }
+            %></h6>
+          </div>
+          
+          <div style="padding-left: 198px ;">
+            <input type="submit" class="logbtn" value="Login" onclick="lsRememberMe()">
+            <input type="reset" class="logbtn" value="Reset">
+          </div>
+  
+        </form>
+        
+
+      </div>
+    </div>
+  
+</body>
+</html>

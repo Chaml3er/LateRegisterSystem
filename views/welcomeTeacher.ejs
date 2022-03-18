@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+body {
+  background-image: url("https://media.discordapp.net/attachments/655680640385286149/780425631376605194/kit.png?width=1194&height=671");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Prompt', sans-serif;
+}
+@font-face {
+  font-family: 'Prompt', sans-serif;
+  src: url(sansation_light.woff);
+}
+.container{
+  background-image: url("https://media.discordapp.net/attachments/655680640385286149/780425631376605194/kit.png?width=1194&height=671");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width : 1500px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 5px;
+  float: left;
+  height: 800px;
+}
+.Tuimage{
+   margin-top: 9px;
+   margin-left: 70px;
+}
+header{
+  width: 880px;
+  height: 150px;
+}
+h1{
+  letter-spacing: 5px;
+  font-size: 4em;
+  padding-left: 20px;
+  margin-top: 9px;
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 300px;
+  letter-spacing: 5px;
+  font-size: 3em;
+  padding-left: 20px;
+  margin-top: 9px;
+}
+.top-left2{
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  letter-spacing: 0px;
+  font-size: 2em;
+  padding-left: 20px;
+  margin-top: 9px;
+}
+.centered {
+  position: absolute;
+  top: 21%;
+  left: 30%;
+  
+}
+.centeredForm{
+  position: absolute;
+  top: 71%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+box{
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+.submit{
+  background-color: #FF6600;
+  border:none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 9px;
+  margin-left: 5px;
+  min-width:290px;
+  
+}
+.submit{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.boxText{
+  /*background-color: rgb(255, 255, 255);*/
+  background-image: url("https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-42312.jpg?size=626&ext=jpg");
+  width: 700px;
+  height: 500px;
+  border: 5px solid #0f0702;
+  padding: 50px;
+  margin: 20px; 
+  background-repeat: no-repeat;
+ 
+  background-size: cover;
+}
+
+    </style>
+
+<body>
+  <br>
+  <div class="container">
+   <div class="Tuimage" style="max-width:20%;">
+        <img src="https://i.imgur.com/u0s7hgn.png" alt="Tu" width="170" height="170">
+        <div class="top-left">ยินดีต้อนรับเข้าสู่ระบบ...</div>
+        <div class="top-left2"><u>ข้อมูลบุคลากร</u></div>
+    </div>
+     
+        <div class="centered" >
+          <br>
+          <div class="boxText">
+            <img src="https://media.discordapp.net/attachments/647841986686091264/780074444479266846/Layer_1.png" alt="PicStu" width="300" height="200" style="margin-left: 150px;">
+            <br>
+            <br>
+            <br>
+            <br>
+            ชื่อ-นามสกุล : <%=name_id %><br>
+            Name-Surname : <%=U_id %><br>
+            สาขา : <%=depart_id %><br>
+            องค์กร :  <%=fac_id %><br>
+          </div>
+        </div>
+
+        <div >
+          <br>
+          <form action = /welcomeTeacher><button class="submit">หน้าแรก</button></form>
+          <form action = /U6><button class="submit">บันทึกความคิดเห็น</button></form>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <form action = /logout><button class="submit">ออกจากระบบ</button></form>
+        </div>
+  </div>
+
+
+</body>
+</html>

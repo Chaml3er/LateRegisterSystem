@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+body {
+  background-image: url("https://media.discordapp.net/attachments/655680640385286149/780425631376605194/kit.png?width=1194&height=671");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Prompt', sans-serif;
+}
+@font-face {
+  font-family: 'Prompt', sans-serif;
+  src: url(sansation_light.woff);
+}
+.container{
+  background-image: url("https://media.discordapp.net/attachments/655680640385286149/780425631376605194/kit.png?width=1194&height=671");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width : 2000px;
+  position: relative;
+  float: left;
+  height: 1000px;
+}
+.Tuimage{
+   margin-top: 9px;
+   margin-left: 70px;
+}
+h1{
+  letter-spacing: 5px;
+  font-size: 4em;
+  padding-left: 20px;
+  margin-top: 9px;
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 300px;
+  letter-spacing: 5px;
+  font-size: 3em;
+  padding-left: 20px;
+  margin-top: 9px;
+}
+.top-left2{
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  letter-spacing: 0px;
+  font-size: 2em;
+  padding-left: 20px;
+  margin-top: 9px;
+}
+.centered {
+  position: absolute;
+  top: 18%;
+  left: 27%;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.centeredForm{
+  position: absolute;
+  top: 71%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.submit{
+  background-color: #FF6600;
+  border:none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 9px;
+  margin-left: 5px;
+  min-width:290px;
+}
+.submit{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+* {
+            box-sizing: border-box;
+        }
+    	div {
+            padding: 10px;
+            overflow: hidden;
+        }
+    	input[type=text], textarea, select {
+            font: 17px Calibri;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+      input[type=button]{ 
+            font: 17px Calibri;
+            width: auto;
+            float: left;
+            cursor: pointer;
+            padding: 7px;
+        }
+      input[type=number]{
+            font: 17px Calibri;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+      }  
+      
+      .boxwidth{
+        width: 700px;
+      }
+      .Push{
+       
+        margin-left: 300px;
+      }
+      .ops{ 
+            font: 17px Calibri;
+            width: auto;
+            float: left;
+            cursor: pointer;
+            padding: 7px;
+        }
+    </style>
+
+<body>
+
+  <div class="container">
+   <div class="Tuimage" style="max-width:20%;">
+        <img src="https://i.imgur.com/u0s7hgn.png" alt="Tu" width="170" height="170">
+        <div class="top-left">จดบันทึกคำร้องนักศึกษา </div>
+        <div class="top-left2"><%=name_id %> <%=U_id %></div>
+    </div>
+     
+        <div class="centered" >
+          <div>
+              <input type="text" id="txtAdress" placeholder="ที่อยู่ที่สามารถติดต่อได้" />
+          </div>
+          <div>
+              <input type="number" id="txtPhone" placeholder="เบอร์โทรศัพท์นักศึกษา" />
+          </div>
+          <div>
+              <input type="number" id="txtPhoneParent" placeholder="เบอร์โทรศัพท์ผู้ปกครอง" />
+          </div>
+          <div>
+            <input type="text" id="txtSubjectName" placeholder="รหัสวิชา/ชื่อวิชา" />
+          </div>
+          <div>
+            <input type="text" id="txtSection" placeholder="Section" />
+          </div>
+          <div>
+            <input type="text" id="txtSYear" placeholder="ปีการศึกษา (X/25XX)" />
+          </div>
+          <div>
+              <select id="txtYear">
+                  <option selected value="">--ชั้นปี--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+              </select>
+          </div>
+          <div class="boxwidth">
+              <textarea id="msg" name="msg" placeholder="เหตุผลที่ยื่นคำร้อง" style="height:100px"></textarea>
+          </div>
+          <div>
+            <input type="button" id="bt" value="บันทึก" onclick="saveFile()" />   
+            <input type="button" id="bt2" value="ส่งคำร้อง"  style="margin-left: 510px;"  onclick="window.location.href='Upload';" />
+      
+          </div>
+          
+        </div>
+
+        <div>
+          <form action = /welcome><button class="submit">หน้าแรก</button></form>
+          <form action = /StudentPetition><button class="submit">บันทึกคำร้องนักศึกษา</button></form>
+          <form action = /Fristpage><button class="submit">ขั้นตอนการจดทะเบียน</button></form>
+          <form action = /Payment><button class="submit" >ชำระเงิน</button></form>
+          <form action = /StatusA><button class="submit">สถานะคำร้อง</button></form>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <form action = /logout><button class="submit">ออกจากระบบ</button></form>
+        </div>
+  </div>
+
+
+</body>
+<script>
+  let saveFile = () => {
+    
+      // Get the data from each element on the form.
+      const Adress = document.getElementById('txtAdress');
+      const Phone = document.getElementById('txtPhone');
+      const PhoneParent = document.getElementById('txtPhoneParent');
+      const SubjectName = document.getElementById('txtSubjectName');
+      const Section = document.getElementById('txtSection');
+      const Year = document.getElementById('txtYear');
+      const Message = document.getElementById('msg');
+      
+      
+      // This variable stores all the data.
+      let data = 
+          'ที่อยู่: ' + Adress.value + ' \r\n ' + 
+          'เบอร์โทรศัพท์: ' +Phone.value + ' \r\n ' + 
+          'เบอร์โทรศัพท์ผู้ปกครอง: ' + PhoneParent.value + ' \r\n ' + 
+          'รหัสวิชา/ชื่อวิชา: ' + SubjectName.value + ' \r\n ' + 
+          'Section: ' + Section.value + ' \r\n ' + 
+          'ชั้นปี: ' + Year.value + ' \r\n ' + 
+          'เหตุผลที่ยื่นคำร้อง: ' + Message.value;
+      
+      // Convert the text to BLOB.
+      const textToBLOB = new Blob([data], { type: 'text/plain' });
+      const sFileName = 'formData.txt';	   // The file to save the data.
+
+      let newLink = document.createElement("a");
+      newLink.download = sFileName;
+
+      if (window.webkitURL != null) {
+          newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+      }
+      else {
+          newLink.href = window.URL.createObjectURL(textToBLOB);
+          newLink.style.display = "none";
+          document.body.appendChild(newLink);
+      }
+
+      newLink.click(); 
+  }
+</script>
+</html>
